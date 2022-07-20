@@ -46,7 +46,7 @@ export default {
   },
   created() {
     this.$http
-      .get("http://localhost:5000/api/aluno")
+      .get("http://http://localhost:3000/aluno")
       .then(res => res.json())
       .then(alunos => {
         this.Alunos = alunos;
@@ -69,7 +69,7 @@ export default {
     },
     carregarProfessores() {
       this.$http
-        .get("http://localhost:5000/api/professor")
+        .get("http://localhost:3000/professores")
         .then(res => res.json())
         .then(professor => {
           this.Professores = professor;

@@ -79,7 +79,7 @@ export default {
   methods: {
     carregarProfessor() {
       this.$http
-        .get("http://localhost:5000/api/professor")
+        .get("http://localhost:3000/professores")
         .then(res => res.json())
         .then(professor => {
           this.professores = professor;
@@ -88,7 +88,7 @@ export default {
     },
     carregarAluno() {
       this.$http
-        .get(`http://localhost:5000/api/aluno/${this.idAluno}`)
+        .get(`http://localhost:3000/aluno/${this.idAluno}`)
         .then(res => res.json())
         .then(aluno => {
           this.aluno = aluno;
@@ -108,7 +108,7 @@ export default {
       };
 
       this.$http
-        .put(`http://localhost:5000/api/aluno/${_alunoEditar.id}`, _alunoEditar)
+        .put(`http://http://localhost:3000/aluno/${_alunoEditar.id}`, _alunoEditar)
         .then(res => res.json())
         .then(aluno => this.aluno = aluno)
         .then(() => this.visualizando = true);
